@@ -76,6 +76,8 @@ class Mastodon {
 
     if (meme.nsfw) status += '\n\n\n#NSFW';
 
+    status += " #meme #funny #bot #reddit";
+
     return writeInTimeline({
       'status': status,
       'spoiler': meme.spoiler,

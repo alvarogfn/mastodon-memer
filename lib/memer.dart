@@ -15,8 +15,11 @@ class Memer {
       controller.add(meme);
     }
 
-    startTimer() {
+    Future<void> startTimer() async {
       timer = Timer.periodic(polling, tick);
+
+      final meme = await fetchMeme();
+      controller.add(meme);
     }
 
     stopTimer() {
