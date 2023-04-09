@@ -1,0 +1,7 @@
+# fly.toml file generated for memerly on 2023-04-09T02:44:09-03:00
+
+app = "memerly"
+kill_signal = "SIGINT"
+kill_timeout = 5
+primary_region = "gru"
+processes = []

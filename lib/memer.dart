@@ -5,7 +5,6 @@ import 'package:memerly/models/meme.dart';
 
 class Memer {
   static const endpoint = "https://meme-api.com/gimme";
-  final List _cache = [];
 
   Stream<Meme> meming({Duration polling = const Duration(hours: 5)}) {
     late StreamController<Meme> controller;

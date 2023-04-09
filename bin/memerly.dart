@@ -1,9 +1,10 @@
+import 'dart:io';
+
 import 'package:memerly/mastodon.dart';
 import 'package:memerly/memer.dart';
 
-
-const accessToken = String.fromEnvironment('accessToken', defaultValue: '');
-const mastodonInstance = String.fromEnvironment('mastodonInstance',
+final accessToken = Platform.environment['accessToken'] ?? '';
+final mastodonInstance = const String.fromEnvironment('mastodonInstance',
     defaultValue: 'https://mastodon.social');
 
 void main() {
@@ -16,5 +17,6 @@ void main() {
 
   final memer = Memer();
 
-  memer.meming(polling: Duration(seconds: 10)).listen(mastodon.postMeme);
+  print("Starting...");
+  memer.meming(polling: Duration(hours: 1)).listen(mastodon.postMeme);
 }
