@@ -74,9 +74,9 @@ class Mastodon {
 
     String status = '${meme.title}\n\n${meme.postLink}';
 
-    if (meme.nsfw) status += '\n\n\n#NSFW';
+    status += "\n\n\n #meme #funny #bot #reddit";
 
-    status += " #meme #funny #bot #reddit";
+    if (meme.nsfw) status += ' #NSFW';
 
     return writeInTimeline({
       'status': status,
