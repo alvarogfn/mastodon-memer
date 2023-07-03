@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'dart:io';
 
 import 'package:http_parser/http_parser.dart';
 import 'package:memerly/models/meme.dart';
