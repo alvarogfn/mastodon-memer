@@ -5,3 +5,9 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 primary_region = "gru"
 processes = []
+
+[[services]]
+  # automatically start machines
+  auto_start_machines = true
+  # automatically stop machines
+  auto_stop_machines = true
