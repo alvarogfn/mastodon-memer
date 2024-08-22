@@ -19,4 +19,18 @@ void main() {
 
   print("Starting...");
   memer.meming(polling: Duration(hours: 1)).listen(mastodon.postMeme);
+
+
+ var server = HttpServer.bind(InternetAddress.anyIPv4, 8080);
+
+ server.then((HttpServer srv) {
+    print('Listening on localhost:${srv.port}');
+    srv.listen((HttpRequest request) {
+      request.response
+        ..write('Hello, world!')
+        ..close();
+    });
+  }).catchError((e) {
+    print('Error starting server: $e');
+  });
 }
